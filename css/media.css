@@ -189,6 +189,9 @@
     .project-items .pr-img img {
         width: 330px;
     }
+    .project-items .items-img h4 {
+        margin-top: 20px;
+    }
     .skills-inner .skill-items li a{
         font-size: 20px;
     }
@@ -216,10 +219,22 @@
     #app span {
         font-size: 20px;
     }
+    .project-items{
+        height: 200px;
+    }
     .project-items .pr-img img {
-        width: 310px;
+        width: 285px;
+    }
+    .project-items:hover .items-img img{
+        width: 260px;
     }
     .skill-items{
         padding: 18px;
+    }
+    .about-title h2,
+    .project-title h2,
+    .skills-title h2,
+    .contact-title h2 {
+        font-size: 32px;
     }
 }

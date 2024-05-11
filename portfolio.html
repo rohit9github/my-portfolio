@@ -7,7 +7,9 @@
     <title>Projects</title>
     <link rel="stylesheet" href="icon/all.min.css">
     <link rel="stylesheet" href="fonts/poppins/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/portfolio.css" type="text/css">
+    <link rel="stylesheet" href="css/portfolio-media.css" type="text/css">
 </head>
 
 <body>
@@ -20,7 +22,10 @@
                 <a href="index.html">
                     <img src="img/logo.png" alt="" width="40%">
                 </a>
-                <nav>
+                <nav class="offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
                     <ul class="d-flex">
                         <li>
                             <a href="index.html" target="_blank">Home</a>
@@ -39,6 +44,8 @@
                         </li>
                     </ul>
                 </nav>
+                <a href="javascript:void(0)" class="toggle-menu" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></a>
             </div>
     </header>
 
@@ -55,14 +62,19 @@
                     </p>
                 </div>
                 <div class="row">
-                    <div class="w-3">
+                    <div class="w-3 w-xl-2 w-md-1">
                         <div class="project-items">
                             <div class="items-img text-center">
                                 <img src="img/Css-pr.png" alt="Css-pr" title="Css-pr">
                                 <h4>CSS Project</h4>
                             </div>
                             <div class="project-content text-center">
-                                <p>Create a visually stunnig website using CSS,focusing on responsive design principle to ensure compatibility across various devices. Implement modern layout techniques like Flexbox for efficient organization of content. Employ CSS animations and transitions to enhance user interaction. The project aims to showcase mastery of CSS fundamentals while demonstrating creativity and attention to detail in design and implementation.
+                                <p>Create a visually stunnig website using CSS,focusing on responsive design principle
+                                    to ensure compatibility across various devices. Implement modern layout techniques
+                                    like Flexbox for efficient organization of content. Employ CSS animations and
+                                    transitions to enhance user interaction. The project aims to showcase mastery of CSS
+                                    fundamentals while demonstrating creativity and attention to detail in design and
+                                    implementation.
                                 </p>
                                 <a href="https://github.com/rohit9github/css_pr.git" target="_blank" class="codebtn">
                                     <i class="fa-solid fa-code"></i>
@@ -73,15 +85,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3">
+                    <div class="w-3 w-xl-2 w-md-1">
                         <div class="project-items">
                             <div class="items-img text-center">
                                 <img src="img/M-Q-pr.png" alt="M-Q-pr" title="M-Q-pr">
                                 <h4>M-Q Project</h4>
                             </div>
                             <div class="project-content text-center">
-                                <p>A media query project involves using CSS to make a website look good an different devices, like phones, tablets, and computers. By using media queries, you can adjust the layout, font size, and other design elements to ensure the website looks great and is easy to use, no matter what devices someone is using to view it. This helps provide a better experience for users and ensures your website is accessible across a variety of devices and screen sizes.</p>
-                                <a href="https://github.com/rohit9github/Reponsive-project.git" target="_blank" class="codebtn">
+                                <p>A media query project involves using CSS to make a website look good an different
+                                    devices, like phones, tablets, and computers. By using media queries, you can adjust
+                                    the layout, font size, and other design elements to ensure the website looks great
+                                    and is easy to use, no matter what devices someone is using to view it. This helps
+                                    provide a better experience for users and ensures your website is accessible across
+                                    a variety of devices and screen sizes.</p>
+                                <a href="https://github.com/rohit9github/Reponsive-project.git" target="_blank"
+                                    class="codebtn">
                                     <i class="fa-solid fa-code"></i>
                                 </a>
                                 <a href="projects/Responsive Pr/index.html" target="_blank" class="linkbtn">
@@ -90,15 +108,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3">
+                    <div class="w-3 w-xl-2 w-md-1">
                         <div class="project-items">
                             <div class="items-img text-center">
                                 <img src="img/J-Query-pr.png" alt="J-Query-pr" title="J-Query-pr">
                                 <h4>J-Query Project</h4>
                             </div>
                             <div class="project-content text-center">
-                                <p>A J-Query project involves using the J-Query library, which is a javascript framework, to make interactive and dynamic web pages. with J-Query,you can easily add animations, handle events like click and scrolls. it simplifies complex javascipt tasks and makes it easier to create engaging and user-friendly websites. Whether you're building a simple website or web app, J-Query can help add interactive and fumctionality to your project with less code and effort.</p>
-                                <a href="https://github.com/rohit9github/J-Query-project.git" target="_blank" class="codebtn">
+                                <p>A J-Query project involves using the J-Query library, which is a javascript
+                                    framework, to make interactive and dynamic web pages. with J-Query,you can easily
+                                    add animations, handle events like click and scrolls. it simplifies complex
+                                    javascipt tasks and makes it easier to create engaging and user-friendly websites.
+                                    Whether you're building a simple website or web app, J-Query can help add
+                                    interactive and fumctionality to your project with less code and effort.</p>
+                                <a href="https://github.com/rohit9github/J-Query-project.git" target="_blank"
+                                    class="codebtn">
                                     <i class="fa-solid fa-code"></i>
                                 </a>
                                 <a href="projects/Jquery pr/index.html" target="_blank" class="linkbtn">
@@ -107,14 +131,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3">
+                    <div class="w-3 w-xl-2 w-md-1">
                         <div class="project-items">
                             <div class="items-img text-center">
                                 <img src="img/Sass-pr.png" alt="Sass-pr" title="Sass-pr">
                                 <h4>Sass Project</h4>
                             </div>
                             <div class="project-content text-center">
-                                <p>SASS is preprocessor to write CSS in a more organized and efficient way. SASS allows you to use features like variables, nesting, mixins and inheritance to streamline your CSS code and make it easier to maintain and scale. with SASS you can write stylesheets faster and with less repetition, which helps speed up development and keep your codebase clean and organized. In simple terms, it's like supercharging your CSS workflow to make styling websites or web app more efficent and powerful.</p>
+                                <p>SASS is preprocessor to write CSS in a more organized and efficient way. SASS allows
+                                    you to use features like variables, nesting, mixins and inheritance to streamline
+                                    your CSS code and make it easier to maintain and scale. with SASS you can write
+                                    stylesheets faster and with less repetition, which helps speed up development and
+                                    keep your codebase clean and organized. In simple terms, it's like supercharging
+                                    your CSS workflow to make styling websites or web app more efficent and powerful.
+                                </p>
                                 <a href="https://github.com/rohit9github/Sass-pr.git" target="_blank" class="codebtn">
                                     <i class="fa-solid fa-code"></i>
                                 </a>
@@ -124,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3">
+                    <div class="w-3 w-xl-2 w-md-1">
                         <div class="project-items">
                             <div class="items-img text-center">
                                 <img src="img/Bt-pr.png" alt="Bt-pr" title="Bt-pr">
@@ -137,7 +167,8 @@
                                     complicated design issues.The website adjusts smoothly to different screen sizes,
                                     making it user-friendly on any device.
                                 </p>
-                                <a href="https://github.com/rohit9github/bootstrap-pr.git" target="_blank" class="codebtn">
+                                <a href="https://github.com/rohit9github/bootstrap-pr.git" target="_blank"
+                                    class="codebtn">
                                     <i class="fa-solid fa-code"></i>
                                 </a>
                                 <a href="projects/bootstrap-pr/index.html" target="_blank" class="linkbtn">
@@ -146,16 +177,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3">
+                    <div class="w-3 w-xl-2 w-md-1">
                         <div class="project-items">
                             <div class="items-img text-center">
                                 <img src="img/Tailwind-pr.png" alt="Tailwind-Pr" title="Tailwind-Pr">
                                 <h4>Tailwind-CSS Project</h4>
                             </div>
                             <div class="project-content text-center">
-                                <p>I recently completed a project using Tailwind CSS, Tailwind CSS is first CSS framework that provide low-level utility classes for building custom designs quickly. With Tailwind CSS, you can create responsive and modern user interface without writing any custom CSS. This project will leverage Tailwind's extensive set of utility classes to style and structure the user interface of your website effiently. Whether you're creating a simple page, Tailwind CSS offers a flexible and intuitive way to design and develop your project.
+                                <p>I recently completed a project using Tailwind CSS, Tailwind CSS is first CSS
+                                    framework that provide low-level utility classes for building custom designs
+                                    quickly. With Tailwind CSS, you can create responsive and modern user interface
+                                    without writing any custom CSS. This project will leverage Tailwind's extensive set
+                                    of utility classes to style and structure the user interface of your website
+                                    effiently. Whether you're creating a simple page, Tailwind CSS offers a flexible and
+                                    intuitive way to design and develop your project.
                                 </p>
-                                <a href="https://github.com/rohit9github/tailwindprework.git" target="_blank" class="codebtn">
+                                <a href="https://github.com/rohit9github/tailwindprework.git" target="_blank"
+                                    class="codebtn">
                                     <i class="fa-solid fa-code"></i>
                                 </a>
                                 <a href="projects/tailwindcss-project/dist/index.html" target="_blank" class="linkbtn">
@@ -164,7 +202,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3">
+                    <div class="w-3 w-xl-2 w-md-1">
                         <div class="project-items">
                             <div class="items-img text-center">
                                 <img src="img/Practice-pr.png" alt="Practice-pr" title="Practice-pr">
@@ -177,7 +215,8 @@
                                     complicated design issues.The website adjusts smoothly to different screen sizes,
                                     making it user-friendly on any device.
                                 </p>
-                                <a href="https://github.com/rohit9github/practice-pr-2.git" target="_blank" class="codebtn">
+                                <a href="https://github.com/rohit9github/practice-pr-2.git" target="_blank"
+                                    class="codebtn">
                                     <i class="fa-solid fa-code"></i>
                                 </a>
                                 <a href="projects/practice-pr/index.html" target="_blank" class="linkbtn">
@@ -191,20 +230,14 @@
         </section>
     </main>
 
-
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-
-        // $(document).ready(function () {
-           
-        //     $(".project-items").hover(function(){
-        //         $(".project-content").slideDown();
-        //     });
-        //     $(".project-items").mouseleave(function(){
-        //         $(".project-content").slideUp();
-        //     });
-        // });
-
+        $(document).ready(function () {
+            $(".toggle-menu").click(function () {
+                $("nav").addClass("offcanvas")
+            })
+        })
     </script>
 </body>
 
