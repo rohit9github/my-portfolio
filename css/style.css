@@ -26,6 +26,7 @@ body {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 a {
@@ -91,7 +92,17 @@ nav ul li a::after {
     left: 0;
     transition: 0.4s all;
 }
-
+header .toggle-menu{
+    background-color: #ff004f;
+    padding: 10px 17px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 6px;
+    display: none;
+}
+.close-btn{
+    display: none;
+}
 nav ul li a:hover::after {
     width: 100%;
 }
@@ -114,6 +125,7 @@ nav ul li a:hover::after {
     font-size: 120px;
     margin-top: 20px;
     color: #fff;
+    font-weight: 700;
 }
 
 .banner-title h1 span {
@@ -412,7 +424,6 @@ nav ul li a:hover::after {
     padding: 50px;
     margin: 0 20px;
     border-radius: 10px;
-    height: 650px;
 }
 
 .skill-items img {

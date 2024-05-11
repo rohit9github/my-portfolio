@@ -5,78 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Developer Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-        }
-
-        .w-3 {
-            width: 33.33%;
-        }
-
-        .d-flex {
-            display: flex;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        a {
-            display: inline-block;
-        }
-        .items{
-            background-color: gray;
-            position: relative;
-            border-radius: 10px;
-            padding: 15px;
-            height: 220px;
-            transition: 0.6s all;
-            margin-top: 80px;
-            z-index: 9;
-        }
-        .items:hover{
-            height: 320px;
-        }
-        .items:hover .items-content{
-            display: block;
-        }
-        .items-img img{
-            width: 350px;
-            border-radius: 10px;
-            display: inline-block;
-            transition: 0.6s all;
-        }
-        .items-img{
+        header {
             position: absolute;
-            top: 8%;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: 0.6s all;
-        }
-        .items:hover .items-img{
-            top: -20%;
-        }
-        .items:hover .items-img img{
-            width:280px;
-        }
-        .items-content{
-            position: absolute;
-            padding: 15px 25px;
-            display: none;
-            top: 26%;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: -1;
         }
-        .items-content a{
-            display: inline-block;
-            margin-top: 10px;
+
+        nav ul li {
+            margin: 0px 24px;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            width: 0%;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            transition: 0.4s all;
+        }
+
+        header .toggle-menu {
+            background-color: #ff004f;
+            padding: 10px 17px;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 6px;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
         }
     </style>
     <!-- <style>
@@ -180,8 +152,39 @@ span {
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <div class="d-flex space-between align-center">
+                <a href="javascipt:void(0)">
+                    <img src="img/logo.png" alt="" width="40%">
+                </a>
+                <nav class="offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <ul class="d-flex" style="flex-direction: column;">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" target="_blank">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="javascript:void(0)" class="toggle-menu" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></a>
 
-    <div class="container">
+            </div>
+    </header>
+
+    <!-- <div class="container">
         <div class="d-flex">
             <div class="w-3">
                 <div class="items">
@@ -199,11 +202,24 @@ span {
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div> -->
 
+
+
+
+        
+    
 
 </body>
+
 <script src="js/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".toggle-menu").click(function(){
+            $("nav").addClass("offcanvas")
+        })
+    })
+</script>
 <!-- <script>
     var app = document.getElementById('app');
 

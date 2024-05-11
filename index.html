@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="icon/all.min.css" type="text/css">
     <link rel="stylesheet" href="fonts/poppins/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
 </head>
@@ -21,7 +22,8 @@
                 <a href="javascipt:void(0)">
                     <img src="img/logo.png" alt="" width="40%">
                 </a>
-                <nav>
+                <nav class="offcanvas-end"  data-bs-backdrop="static" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
                     <ul class="d-flex">
                         <li>
                             <a href="index.html">Home</a>
@@ -40,6 +42,9 @@
                         </li>
                     </ul>
                 </nav>
+
+                <a href="javascript:void(0)" class="toggle-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></a>
+
             </div>
     </header>
 
@@ -151,7 +156,8 @@
                                         showcase mastery of CSS fundamentals while demonstrating creativity and
                                         attention to detail in design and implementation. </p>
                                     <div class="buttons">
-                                        <a href="https://github.com/rohit9github/css_pr.git" target="_blank" class="codebtn">
+                                        <a href="https://github.com/rohit9github/css_pr.git" target="_blank"
+                                            class="codebtn">
                                             <i class="fa-solid fa-code"></i>
                                         </a>
                                         <a href="projects/CSS pr/index.html" target="_blank" class="linkbtn">
@@ -176,7 +182,8 @@
                                         hair out over complicated design issues.The website adjusts smoothly to
                                         different screen sizes, making it user-friendly on any device.</p>
                                     <div class="buttons">
-                                        <a href="https://github.com/rohit9github/bootstrap-pr.git" target="_blank" class="codebtn">
+                                        <a href="https://github.com/rohit9github/bootstrap-pr.git" target="_blank"
+                                            class="codebtn">
                                             <i class="fa-solid fa-code"></i>
                                         </a>
                                         <a href="projects/bootstrap-pr/index.html" target="_blank" class="linkbtn">
@@ -203,10 +210,12 @@
                                         effiently. Whether you're creating a simple page, Tailwind CSS offers a flexible
                                         and intuitive way to design and develop your project.</p>
                                     <div class="buttons">
-                                        <a href="https://github.com/rohit9github/tailwindprework.git" target="_blank" class="codebtn">
+                                        <a href="https://github.com/rohit9github/tailwindprework.git" target="_blank"
+                                            class="codebtn">
                                             <i class="fa-solid fa-code"></i>
                                         </a>
-                                        <a href="projects/tailwindcss-project/dist/index.html" target="_blank" class="linkbtn">
+                                        <a href="projects/tailwindcss-project/dist/index.html" target="_blank"
+                                            class="linkbtn">
                                             <i class="fa-solid fa-link"></i>
                                         </a>
                                     </div>
@@ -343,7 +352,7 @@
                                             <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0)"><i class="fa-brands fa-upwork"></i></a>
+                                            <a href="javascript:void(0)"><i class="fa-brands fa-whatsapp"></i></a>
                                         </li>
                                         <li>
                                             <a href="https://github.com/rohit9github" target="_blank"><i
@@ -372,10 +381,16 @@
 
     </main>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script>
+        $(document).ready(function(){
+        $(".toggle-menu").click(function(){
+            $("nav").addClass("offcanvas")
+        })
+    })
         window.onload = function () {
             Particles.init({
                 selector: '.background',
