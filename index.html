@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="icon/all.min.css" type="text/css">
     <link rel="stylesheet" href="fonts/poppins/stylesheet.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -45,7 +47,8 @@
                     </ul>
                 </nav>
 
-                <a href="javascript:void(0)" class="toggle-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></a>
+                <a href="javascript:void(0)" class="toggle-menu" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></a>
 
             </div>
     </header>
@@ -58,7 +61,7 @@
 
         <section class="banner">
             <div class="conatiner">
-                <div class="banner-title text-center">
+                <div class="banner-title text-center animate__animated WOW bounce">
                     <h1>Hi, I'Am Gohil <span>Rohit</span></h1>
                     <div id="app">
                         <span>Web Devloper</span>
@@ -79,7 +82,7 @@
                 <div class="about-inner">
                     <div class="row">
                         <div class="w-2 w-md-1">
-                            <div class="about-items">
+                            <div class="about-items animate__animated slideInLeft wow">
                                 <h5>Front End Devloper</h5>
                                 <p>Hello ! My name is Gohil Rohit and I am a passionate web developer. I specialize in
                                     creating dynamic and interactive web applications.</p>
@@ -107,7 +110,7 @@
                             </div>
                         </div>
                         <div class="w-2 w-md-1">
-                            <div class="about-items">
+                            <div class="about-items  animate__animated slideInRight wow" data-wow-offset="10" >
                                 <h5>Must Visit</h5>
                                 <div class="profile d-flex align-center">
                                     <img src="img/linkedin.png" alt="" width="80px">
@@ -143,8 +146,8 @@
                 <div class="project-inner">
                     <div class="row">
                         <div class="w-3 w-xl-2 w-md-1">
-                            <div class="project-items">
-                                <div class="items-img text-center">
+                            <div class="project-items text-center animate__animated animate__slideInUp wow">
+                                <div class="items-img">
                                     <div class="pr-img">
                                         <img src="img/Css-pr.png" alt="Css-pr" title="Css-pr">
                                     </div>
@@ -170,8 +173,8 @@
                             </div>
                         </div>
                         <div class="w-3 w-xl-2 w-md-1">
-                            <div class="project-items">
-                                <div class="items-img text-center">
+                            <div class="project-items text-center  animate__animated animate__slideInUp wow">
+                                <div class="items-img">
                                     <div class="pr-img">
                                         <img src="img/Bt-pr.png" alt="Bt-pr" title="Bt-pr">
                                     </div>
@@ -196,7 +199,7 @@
                             </div>
                         </div>
                         <div class="w-3 w-xl-2 w-md-1">
-                            <div class="project-items">
+                            <div class="project-items  animate__animated animate__slideInUp wow">
                                 <div class="items-img text-center">
                                     <div class="pr-img">
                                         <img src="img/Tailwind-pr.png" alt="Tailwind-Pr" title="Tailwind-Pr">
@@ -243,7 +246,7 @@
                 <div class="skills-inner">
                     <div class="row align-center">
                         <div class="w-2 w-md-1">
-                            <div class="skill-items">
+                            <div class="skill-items animate__animated slideInLeft wow">
                                 <ul>
                                     <li>
                                         <a href="#projects">HTML</a>
@@ -269,7 +272,7 @@
                             </div>
                         </div>
                         <div class="w-2 w-md-1">
-                            <div class="skill-items">
+                            <div class="skill-items animate__animated slideInRight wow">
                                 <ul>
                                     <li>
                                         <a href="#projects">Jquery</a>
@@ -310,7 +313,7 @@
                 <div class="contact-inner">
                     <div class="row">
                         <div class="w-2 w-md-1">
-                            <div class="contact-items">
+                            <div class="contact-items animate__animated slideInLeft wow">
                                 <div class="get-in-touch-items">
                                     <ul class="d-flex">
                                         <li class="text-center">
@@ -365,7 +368,7 @@
                             </div>
                         </div>
                         <div class="w-2 w-md-1">
-                            <div class="contact-items">
+                            <div class="contact-items animate__animated slideInRight wow">
                                 <form>
                                     <input type="text" placeholder="Name">
                                     <input type="text" placeholder="Email">
@@ -387,7 +390,9 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js/wow.min.js"></script>
     <script>
+        new WOW().init();
         $(document).ready(function () {
             $(".toggle-menu").click(function () {
                 $("nav").addClass("offcanvas")
@@ -417,6 +422,10 @@
             .typeString('<strong>Front-End Developer</strong>')
             .pauseFor(2500)
             .start();
+
+        
+
+        
     </script>
 
 </body>
