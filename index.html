@@ -59,7 +59,7 @@
 
         <!-- /// BANNER /// -->
 
-        <section class="banner">
+        <section class="banner" id="onTop">
             <div class="conatiner">
                 <div class="banner-title text-center animate__animated WOW bounce">
                     <h1>Hi, I'Am Gohil <span>Rohit</span></h1>
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                         <div class="w-2 w-md-1">
-                            <div class="about-items  animate__animated slideInRight wow" data-wow-offset="10" >
+                            <div class="about-items  animate__animated slideInRight wow" data-wow-offset="10">
                                 <h5>Must Visit</h5>
                                 <div class="profile d-flex align-center">
                                     <img src="img/linkedin.png" alt="" width="80px">
@@ -386,6 +386,12 @@
 
     </main>
 
+    <!-- /// Back-To-Top /// -->
+
+    <a href="#onTop" class="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
@@ -397,6 +403,17 @@
             $(".toggle-menu").click(function () {
                 $("nav").addClass("offcanvas")
             })
+        })
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 0) {
+                $("header").addClass("sticky");
+                $("header nav ul li a").addClass("active");
+                $(".backToTop").fadeIn();
+            } else {
+                $("header").removeClass("sticky");
+                $("header nav ul li a").removeClass("active");
+                $(".backToTop").fadeOut();
+            }
         })
         window.onload = function () {
             Particles.init({
@@ -423,9 +440,9 @@
             .pauseFor(2500)
             .start();
 
-        
 
-        
+
+
     </script>
 
 </body>

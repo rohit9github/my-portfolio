@@ -122,6 +122,15 @@
                 $("nav").addClass("offcanvas")
             })
         })
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 0) {
+                $("header").addClass("sticky");
+                $("header nav ul li a").addClass("active")
+            } else {
+                $("header").removeClass("sticky");
+                $("header nav ul li a").removeClass("active");
+            }
+        })
     </script>
 </body>
 

@@ -63,11 +63,12 @@ img {
 /* header */
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
+    transition: 0.4s all;
 }
 
 nav ul li {
@@ -103,10 +104,30 @@ header .toggle-menu{
 .close-btn{
     display: none;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after, header nav ul li a:hover .active::after {
     width: 100%;
 }
-
+.sticky{
+    background-color: #ff004f;
+    padding: 8px 0;
+    animation: slide 0.6s 1 linear;
+}
+.active::after{
+    background-color: #fff;
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+@keyframes slide {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 /* /// BANNER /// */
 
 .banner {
@@ -240,6 +261,7 @@ nav ul li a:hover::after {
 
 .project {
     margin: 100px 0 150px 0;
+    z-index: -1 !important;
 }
 
 .project-title h2 {
@@ -276,7 +298,6 @@ nav ul li a:hover::after {
    border-radius: 10px;
    height: 240px;
    transition: 0.6s all;
-   z-index: 9;
    margin: 0 5px;
 }
 .items-img .pr-img img{
@@ -527,4 +548,17 @@ nav ul li a:hover::after {
 }
 .contact-items .get-in-touch-items:nth-child(2){
     margin: 26px 0;
+}
+
+/* /// Back-To-Top /// */
+
+.backToTop{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #ff004f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 22px;
 }
