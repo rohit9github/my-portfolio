@@ -14,6 +14,14 @@
 
 <body>
 
+    <!-- /// LOADER /// -->
+
+    <div class="loader-main">
+        <div class="box">
+            <div class="loader"></div>
+        </div>
+    </div>
+
     <!-- /// HEADER /// -->
 
     <header>
@@ -24,7 +32,8 @@
                 </a>
                 <nav class="offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasRight"
                     aria-labelledby="offcanvasRightLabel">
-                    <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
                     <ul class="d-flex">
                         <li>
                             <a href="index.html">Home</a>
@@ -122,6 +131,13 @@
                 $("nav").addClass("offcanvas")
             })
         })
+        $(window).on('load', function () {
+
+            if ($('div').is('.loader-main')) {
+                $('.loader-main').delay(800).fadeOut(1000);
+            }
+
+        });
         $(window).scroll(function () {
             if ($(window).scrollTop() > 0) {
                 $("header").addClass("sticky");
@@ -131,6 +147,7 @@
                 $("header nav ul li a").removeClass("active");
             }
         })
+
     </script>
 </body>
 

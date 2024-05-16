@@ -16,6 +16,14 @@
 
 <body>
 
+    <!-- /// LOADER /// -->
+
+    <div class="loader-main">
+        <div class="box">
+            <div class="loader"></div>
+        </div>
+    </div>
+
     <!-- /// HEADER /// -->
 
     <header>
@@ -253,6 +261,13 @@
                 $(".backToTop").fadeOut();
             }
         })
+        $(window).on('load', function () {
+
+            if ($('div').is('.loader-main')) {
+                $('.loader-main').delay(800).fadeOut(1000);
+            }
+
+        });
     </script>
 </body>
 
