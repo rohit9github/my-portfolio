@@ -153,7 +153,7 @@ nav ul li a:hover::after, header nav ul li a:hover .active::after {
 }
 .sticky{
     background-color: #ff004f;
-    padding: 8px 0;
+    padding: 4px 0;
     animation: slide 0.6s 1 linear;
 }
 .active::after{
@@ -361,7 +361,8 @@ nav ul li a:hover::after, header nav ul li a:hover .active::after {
 }
 .project-items .items-img h4{
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 500; 
+    margin-top: 14px;
 }
 .project-items .project-content{
     padding: 15px;

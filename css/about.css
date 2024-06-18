@@ -148,13 +148,12 @@ header .toggle-menu{
 .close-btn{
     display: none;
 }
-
 nav ul li a:hover::after, header nav ul li a:hover .active::after {
     width: 100%;
 }
 .sticky{
     background-color: #ff004f;
-    padding: 8px 0;
+    padding: 4px 0;
     animation: slide 0.6s 1 linear;
 }
 .active::after{
